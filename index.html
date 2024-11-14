@@ -1,46 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Harmony | Sign Up</title>
-  </head>
-  <body>
-    <form class="form-wrapper">
-      <div class="form-section">
-        <div class="form-field">
-          <label for="email" class="form-label">Email*</label>
-          <input
-            name="email"
-            type="text"
-            class="form-input"
-            placeholder="Your email"
-          />
-        </div>
-        <div class="form-field">
-          <label for="level" class="form-label">Level*</label>
-          <select name="level" class="form-input">
-            <option value="basic">Basic</option>
-            <option value="advanced">Advanced</option>
-          </select>
-        </div>
-        <div class="form-field">
-          <label for="hoursPerWeek" class="form-label">Hours per week*</label>
-          <input
-            name="hours-per-week"
-            type="number"
-            class="form-input"
-            placeholder="How many?"
-          />
-        </div>
+<head>
+  <title>Harmony | Sign Up</title>
+  <link rel="stylesheet" href="./index.css" />
+</head>
+<body>
+<form class="form-wrapper">
+  <div class="form-section">
+    <img
+            class="mobile-display"
+            src="./assets/harmony-music-academy-logo.svg"
+            alt="Harmony Music Academy logo"
+    />
+    <div class="form-field">
+      <label for="email" class="form-label">Email*</label>
+      <input
+              id="email"
+              name="email"
+              type="email"
+              class="form-input"
+              placeholder="Your email"
+      />
+      <div id="email-error"></div>
+    </div>
+    <div class="form-field">
+      <label for="level" class="form-label">Level*</label>
+      <select id="level" name="level" class="form-input">
+        <option value="basic">Basic</option>
+        <option value="advanced">Advanced</option>
+      </select>
+      <div id="level-error"></div>
+    </div>
+    <div class="form-field">
+      <label for="hoursPerWeek" class="form-label">Hours per week*</label>
+      <input
+              id="hoursPerWeek"
+              name="hours-per-week"
+              type="number"
+              class="form-input"
+              placeholder="How many?"
+      />
+      <div id="hoursPerWeek-error"></div>
+    </div>
 
-        <button type="submit" class="submit-btn">Sign up</button>
-      </div>
+    <button type="submit" class="submit-btn">Sign up</button>
+  </div>
 
-      <div class="form-section">
-        <img
-          src="./assets/harmony-music-academy-logo.svg"
-          alt="Harmony Music Academy logo"
-        />
-      </div>
-    </form>
-  </body>
+  <div class="form-section mobile-hidden">
+    <img
+            src="./assets/harmony-music-academy-logo.svg"
+            alt="Harmony Music Academy logo"
+    />
+  </div>
+</form>
+
+<script type="module" src="./index.js"></script>
+</body>
 </html>

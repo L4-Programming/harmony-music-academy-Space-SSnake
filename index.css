@@ -9,6 +9,8 @@
   --sky-500: rgb(14 165 233);
   --box-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
     0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --error-bkg: rgb(255, 241, 241);
+  --error-placeholder: rgb(255, 157, 157);
 }
 * {
   color: var(--grey-500);
@@ -65,6 +67,9 @@ button {
   outline: 2px solid var(--sky-500);
   box-shadow: var(--box-shadow-lg);
 }
+.mobile-display {
+  display: none;
+}
 .submit-btn {
   border-radius: 1.75rem;
   margin: 0 auto;
@@ -86,4 +91,36 @@ button {
   outline: 1px solid var(--brand-dark);
   box-shadow: var(--box-shadow-lg);
   transition: all 0.3s ease;
+}
+
+.error-input {
+  background-color: var(--error-bkg);
+  color: var(--brand-dark);
+  border-color: var(--brand-dark);
+}
+.error-input::placeholder {
+  color: var(--error-placeholder);
+}
+.error-label {
+  color: var(--brand-dark);
+}
+.error-message ul {
+  padding-left: 0;
+}
+.error-message ul li {
+  color: var(--brand-dark);
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.1px;
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 640px) {
+  .mobile-hidden {
+    display: none;
+  }
+  .mobile-display {
+    display: block;
+  }
 }
